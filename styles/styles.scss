@@ -1,0 +1,128 @@
+@import "./reset";
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+$--cl-p-Blue: hsl(246, 80%, 60%);
+$--cl-p-Orange: hsl(15, 100%, 70%); //(work)
+$--cl-p-Softblue: hsl(195, 74%, 62%); //(play)
+$--cl-p-Lightred: hsl(348, 100%, 68%); //(study)
+$--cl-p-Limegreen: hsl(145, 58%, 55%); //(exercise)
+$--cl-p-Violet: hsl(264, 64%, 52%); //(social)
+$--cl-p-Softorange: hsl(43, 84%, 65%); //(self care)
+
+$--cl-n-Verydarkblue: hsl(226, 43%, 10%);
+$--cl-n-Darkblue: hsl(235, 46%, 20%);
+$--cl-n-Desaturatedblue: hsl(235, 45%, 61%);
+$--cl-n-PaleBlue: hsl(236, 100%, 87%);
+
+$--fs-400: 1.125rem; //(card titles e.g. Work, Play)
+
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: $--cl-n-Verydarkblue;
+}
+
+.grid-container {
+  margin: 0 auto;
+  width: 90%;
+  height: min-content;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 1.5fr repeat(6, 1fr);
+  grid-template-areas:
+    "user"
+    "work"
+    "play"
+    "study"
+    "exercise"
+    "social"
+    "self-care";
+  gap: 1rem
+}
+
+.card {
+  border-radius: .51rem;
+}
+
+.card__info {
+ background-color: $--cl-n-Darkblue;
+ border-radius: .51rem;
+ padding: 2rem;
+ margin-top: 10%;
+}
+
+.user {
+  grid-area: user;
+  background-color: $--cl-n-Darkblue;
+}
+.work {
+  grid-area: work;
+  background-color: $--cl-p-Orange;
+  background-image: url(/images/icon-work.svg);
+}
+.play {
+  grid-area: play;
+  background-color: $--cl-p-Softblue;
+  background-image: url(/images/icon-play.svg);
+}
+.study {
+  grid-area: study;
+  background-color: $--cl-p-Lightred;
+  background-image: url(/images/icon-study.svg);
+}
+.exercise {
+  grid-area: exercise;
+  background-color: $--cl-p-Limegreen;
+  background-image: url(/images/icon-exercise.svg);
+}
+.social {
+  grid-area: social;
+  background-color: $--cl-p-Violet;
+  background-image: url(/images/icon-social.svg);
+}
+.self-care {
+  grid-area: self-care;
+  background-color: $--cl-p-Softorange;
+  background-image: url(/images/icon-self-care.svg);
+}
+
+.work, .play, .study, .exercise, .social, .self-care {
+  background-repeat: no-repeat;
+  background-size: 15%;
+  background-position: 95% -2%;
+}
+
+@media (min-width: 800px) {
+  html {
+    font-family: "Rubik", sans-serif;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-container {
+    width: 77%;
+    height: 50%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+      "user work play study"
+      "user exercise social self-care";
+    gap: 2rem;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    padding: 1rem 0;
+  }
+}

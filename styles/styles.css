@@ -1,0 +1,189 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+html {
+  font-family: "Rubik", sans-serif;
+}
+
+body {
+  background-color: #0f1424;
+}
+
+.grid-container {
+  margin: 0 auto;
+  width: 90%;
+  height: -webkit-min-content;
+  height: -moz-min-content;
+  height: min-content;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 100%;
+      grid-template-columns: 100%;
+  -ms-grid-rows: 1.5fr (1fr)[6];
+      grid-template-rows: 1.5fr repeat(6, 1fr);
+      grid-template-areas: "user" "work" "play" "study" "exercise" "social" "self-care";
+  gap: 1rem;
+}
+
+.card {
+  border-radius: .51rem;
+}
+
+.card__info {
+  background-color: #1c1f4a;
+  border-radius: .51rem;
+  padding: 2rem;
+  margin-top: 10%;
+}
+
+.user {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: user;
+  background-color: #1c1f4a;
+}
+
+.work {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: work;
+  background-color: #ff8c66;
+  background-image: url(/images/icon-work.svg);
+}
+
+.play {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: play;
+  background-color: #56c2e6;
+  background-image: url(/images/icon-play.svg);
+}
+
+.study {
+  -ms-grid-row: 4;
+  -ms-grid-column: 1;
+  grid-area: study;
+  background-color: #ff5c7c;
+  background-image: url(/images/icon-study.svg);
+}
+
+.exercise {
+  -ms-grid-row: 5;
+  -ms-grid-column: 1;
+  grid-area: exercise;
+  background-color: #4acf81;
+  background-image: url(/images/icon-exercise.svg);
+}
+
+.social {
+  -ms-grid-row: 6;
+  -ms-grid-column: 1;
+  grid-area: social;
+  background-color: #7536d3;
+  background-image: url(/images/icon-social.svg);
+}
+
+.self-care {
+  -ms-grid-row: 7;
+  -ms-grid-column: 1;
+  grid-area: self-care;
+  background-color: #f1c65b;
+  background-image: url(/images/icon-self-care.svg);
+}
+
+.work, .play, .study, .exercise, .social, .self-care {
+  background-repeat: no-repeat;
+  background-size: 15%;
+  background-position: 95% -2%;
+}
+
+@media (min-width: 800px) {
+  html {
+    font-family: "Rubik", sans-serif;
+    height: 100vh;
+    width: 100vw;
+  }
+  body {
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .grid-container {
+    width: 77%;
+    height: 50%;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    -ms-grid-rows: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: "user work play study" "user exercise social self-care";
+    gap: 2rem;
+  }
+  footer {
+    position: fixed;
+    bottom: 0;
+    padding: 1rem 0;
+  }
+}
+/*# sourceMappingURL=styles.css.map */
