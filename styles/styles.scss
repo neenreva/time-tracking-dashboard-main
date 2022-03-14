@@ -15,6 +15,7 @@ $--cl-n-Desaturatedblue: hsl(235, 45%, 61%);
 $--cl-n-PaleBlue: hsl(236, 100%, 87%);
 
 $--fs-400: 1.125rem; //(card titles e.g. Work, Play)
+$--fs-600: 3rem;
 
 html {
   font-family: "Rubik", sans-serif;
@@ -39,18 +40,29 @@ body {
     "exercise"
     "social"
     "self-care";
-  gap: 1rem
+  gap: 1rem;
 }
 
 .card {
-  border-radius: .51rem;
+  border-radius: 0.51rem;
+  position: relative;
 }
 
 .card__info {
- background-color: $--cl-n-Darkblue;
- border-radius: .51rem;
- padding: 2rem;
- margin-top: 10%;
+  background-color: $--cl-n-Darkblue;
+  border-radius: 0.51rem;
+  padding: 2rem;
+  margin-top: 3rem;
+  color: white;
+}
+
+.card__activity {
+  font-size: var($--fs-400);
+  font-weight: 500;
+}
+
+.current {
+  font-size: var($--fs-600);
 }
 
 .user {
@@ -88,10 +100,19 @@ body {
   background-image: url(/images/icon-self-care.svg);
 }
 
-.work, .play, .study, .exercise, .social, .self-care {
+.work,
+.play,
+.study,
+.exercise,
+.social,
+.self-care {
   background-repeat: no-repeat;
-  background-size: 15%;
-  background-position: 95% -2%;
+  background-size: 5rem;
+  background-position: 90% -10%;
+}
+
+.hidden {
+  display: none;
 }
 
 @media (min-width: 800px) {
@@ -120,6 +141,14 @@ body {
       "user exercise social self-care";
     gap: 2rem;
   }
+
+  .card__info {
+    height: 85%;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+  }
+
   footer {
     position: fixed;
     bottom: 0;
