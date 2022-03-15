@@ -58,7 +58,7 @@ body {
 
 .grid-container {
   margin: 0 auto;
-  width: 90%;
+  width: 90vw;
   height: -webkit-min-content;
   height: -moz-min-content;
   height: min-content;
@@ -70,30 +70,75 @@ body {
 }
 
 .card {
-  border-radius: 0.51rem;
+  border-radius: 0.5rem;
   position: relative;
 }
 
 .card__info {
   background-color: #1c1f4a;
-  border-radius: 0.51rem;
+  border-radius: 0.5rem;
   padding: 2rem;
   margin-top: 3rem;
   color: white;
 }
+.card__info:hover {
+  cursor: pointer;
+  background-color: #6f76c8;
+}
 
 .card__activity {
-  font-size: var(1.125rem);
+  font-size: clamp(1vh, 1.125rem, 3vh);
   font-weight: 500;
 }
 
 .current {
-  font-size: var(3rem);
+  font-size: clamp(1vh, 4rem, 5.5vh);
+  margin: 15% 0 5% 0;
+  font-weight: 300;
+}
+
+.previous {
+  font-size: clamp(1vh, 1.125rem, 3vh);
+  font-weight: 300;
 }
 
 .user {
   grid-area: user;
   background-color: #1c1f4a;
+}
+
+.user__info, .user__period {
+  padding: 2rem;
+}
+
+.user__info {
+  background-color: #5847eb;
+  border-radius: 0.5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  color: white;
+}
+.user__info img {
+  height: min(10vw, 5rem);
+}
+.user__info p {
+  color: #bdc1ff;
+}
+.user__info h2 {
+  font-size: clamp(1vh, 2.5rem, 4vh);
+  font-weight: 300;
+}
+
+.user__period {
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  color: #6f76c8;
+}
+.user__period a:hover {
+  cursor: pointer;
+  color: white;
 }
 
 .work {
@@ -139,8 +184,8 @@ body {
 .social,
 .self-care {
   background-repeat: no-repeat;
-  background-size: 5rem;
   background-position: 90% -10%;
+  border-radius: 0.6rem;
 }
 
 .hidden {
@@ -166,14 +211,30 @@ body {
     width: 77%;
     height: 50%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "user work play study" "user exercise social self-care";
     gap: 2rem;
   }
 
+  .card {
+    width: 17.5vw;
+    min-height: 13rem;
+  }
+
+  .user__info {
+    height: 70%;
+  }
+
+  .user__period {
+    height: 30%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .card__info {
-    height: 85%;
+    margin-top: 0;
+    height: 82%;
     width: 100%;
     position: absolute;
     bottom: 0;

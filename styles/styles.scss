@@ -14,8 +14,9 @@ $--cl-n-Darkblue: hsl(235, 46%, 20%);
 $--cl-n-Desaturatedblue: hsl(235, 45%, 61%);
 $--cl-n-PaleBlue: hsl(236, 100%, 87%);
 
-$--fs-400: 1.125rem; //(card titles e.g. Work, Play)
-$--fs-600: 3rem;
+$--fs-400: clamp(1vh, 1.125rem, 3vh);
+$--fs-500: clamp(1vh, 2.5rem, 4vh);
+$--fs-600: clamp(1vh, 4rem, 5.5vh);
 
 html {
   font-family: "Rubik", sans-serif;
@@ -27,7 +28,7 @@ body {
 
 .grid-container {
   margin: 0 auto;
-  width: 90%;
+  width: 90vw;
   height: min-content;
   display: grid;
   grid-template-columns: 100%;
@@ -44,56 +45,105 @@ body {
 }
 
 .card {
-  border-radius: 0.51rem;
+  border-radius: 0.5rem;
   position: relative;
 }
 
 .card__info {
   background-color: $--cl-n-Darkblue;
-  border-radius: 0.51rem;
+  border-radius: 0.5rem;
   padding: 2rem;
   margin-top: 3rem;
   color: white;
+  &:hover {
+    cursor: pointer;
+    background-color: $--cl-n-Desaturatedblue;
+  }
 }
 
 .card__activity {
-  font-size: var($--fs-400);
+  font-size: $--fs-400;
   font-weight: 500;
 }
 
 .current {
-  font-size: var($--fs-600);
+  font-size: $--fs-600;
+  margin: 15% 0 5% 0;
+  font-weight: 300;
+}
+
+.previous {
+  font-size: $--fs-400;
+  font-weight: 300;
 }
 
 .user {
   grid-area: user;
   background-color: $--cl-n-Darkblue;
 }
+
+.user__info, .user__period {
+  padding: 2rem;
+}
+
+.user__info {
+  background-color: $--cl-p-Blue;
+  border-radius: .5rem;
+  height: fit-content;
+  color: white;
+  img {
+    height: min(10vw, 5rem);
+  }
+  p {
+    color: $--cl-n-PaleBlue;
+  }
+  h2 {
+    font-size: $--fs-500;
+    font-weight: 300;
+  }
+}
+
+.user__period {
+  height: 30%;
+  display: flex;
+  justify-content: space-between;
+  color: $--cl-n-Desaturatedblue;
+  a:hover {
+    cursor: pointer;
+    color: white;
+  }
+}
+
 .work {
   grid-area: work;
   background-color: $--cl-p-Orange;
   background-image: url(/images/icon-work.svg);
 }
+
 .play {
   grid-area: play;
   background-color: $--cl-p-Softblue;
   background-image: url(/images/icon-play.svg);
 }
+
 .study {
   grid-area: study;
   background-color: $--cl-p-Lightred;
   background-image: url(/images/icon-study.svg);
 }
+
 .exercise {
   grid-area: exercise;
   background-color: $--cl-p-Limegreen;
   background-image: url(/images/icon-exercise.svg);
 }
+
 .social {
   grid-area: social;
   background-color: $--cl-p-Violet;
   background-image: url(/images/icon-social.svg);
 }
+
 .self-care {
   grid-area: self-care;
   background-color: $--cl-p-Softorange;
@@ -107,8 +157,9 @@ body {
 .social,
 .self-care {
   background-repeat: no-repeat;
-  background-size: 5rem;
+  // background-size: 5rem;
   background-position: 90% -10%;
+  border-radius: 0.6rem;
 }
 
 .hidden {
@@ -134,7 +185,7 @@ body {
     width: 77%;
     height: 50%;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: auto;
     grid-template-rows: 1fr 1fr;
     grid-template-areas:
       "user work play study"
@@ -142,8 +193,24 @@ body {
     gap: 2rem;
   }
 
+  .card {
+    width: clamp(10vw, 17.5vw, 25vw);
+    min-height: 13rem;
+  }
+
+  .user__info {
+    height: 70%;
+  }
+
+  .user__period {
+    height: 30%;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   .card__info {
-    height: 85%;
+    margin-top: 0;
+    height: 82%;
     width: 100%;
     position: absolute;
     bottom: 0;
