@@ -1,0 +1,34 @@
+@media (min-width: 800px) {
+  html {
+    height: 100vh;
+    width: 100vw;
+  }
+
+  body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(2, auto);
+    width: 80vw;
+    gap: 1rem;
+  }
+
+  .user {
+    grid-area: span 2;
+  }
+
+  .user__info {
+    flex-direction: column;
+  }
+
+  .card__time > .time:not(.hidden) {
+    flex-direction: column;
+  }
+}
