@@ -9,7 +9,7 @@ $--cl-p-exercise: hsl(145, 58%, 55%);
 $--cl-p-social: hsl(264, 64%, 52%);
 $--cl-p-selfcare: hsl(43, 84%, 65%);
 
-$--cl-n-Verydarkblue: hsl(226, 43%, 10%);
+$--cl-n-Vrydarkbelue: hsl(226, 43%, 10%);
 $--cl-n-Darkblue: hsl(235, 46%, 20%);
 $--cl-n-Desaturatedblue: hsl(235, 45%, 61%);
 $--cl-n-PaleBlue: hsl(236, 100%, 87%);
@@ -25,7 +25,7 @@ html {
 }
 
 body {
-  background-color: $--cl-n-Verydarkblue;
+  background-color: $--cl-n-Vrydarkbelue;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,6 +51,16 @@ body {
     border-radius: 50%;
     height: 3rem;
     width: 3rem;
+  }
+  .user__period {
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    color: $--cl-n-Desaturatedblue;
+    a:hover {
+      color: $--cl-n-white;
+      cursor: pointer;
+    }
   }
 }
 .work {
@@ -89,7 +99,7 @@ body {
   background-position: 90% -5%;
   background-size: 2rem;
   display: flex;
-  // height: 15rem; // **Overall card height. 
+  // height: 15rem; // **Overall card height.
 }
 
 .user__info,
@@ -109,6 +119,10 @@ body {
 .card__info {
   display: flex;
   flex-direction: column;
+  &:hover {
+    background-color: $--cl-n-Desaturatedblue;
+    cursor: pointer;
+  }
 }
 
 .card__menu {
@@ -125,6 +139,10 @@ body {
   justify-content: space-between;
 }
 
+h1 {
+  font-size: 3rem;
+  font-weight: 300;
+}
 
 .hidden {
   display: none;

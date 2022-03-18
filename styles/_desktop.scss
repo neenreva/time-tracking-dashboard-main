@@ -22,6 +22,10 @@
 
   .user {
     grid-area: span 2;
+    .user__period { // Daily, Monthly, Weekly
+      display: flex;
+      flex-direction: column;
+    }
   }
 
   .user__info {

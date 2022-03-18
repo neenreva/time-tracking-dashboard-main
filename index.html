@@ -11,9 +11,8 @@
       sizes="32x32"
       href="src/images/favicon-32x32.png"
     />
-
     <link rel="stylesheet" href="/styles/styles.css" />
-
+    <script defer src="app.js"></script>
     <title>Frontend Mentor | Time tracking dashboard</title>
   </head>
   <body>
@@ -27,12 +26,12 @@
           </div>
         </div>
         <div class="user__period">
-          <a>Daily</a>
-          <a>Weekly</a>
-          <a>Monthly</a>
+          <a class="time-toggle daily-toggle">Daily</a>
+          <a class="time-toggle weekly-toggle">Weekly</a>
+          <a class="time-toggle monthly-toggle">Monthly</a>
         </div>
       </div>
-      <div class="card work">
+      <div class="card card-display work">
         <div class="card__info">
           <div class="card__menu">
             <p class="card__activity">Work</p>
@@ -54,7 +53,7 @@
           </div>
         </div>
       </div>
-      <div class="card play">
+      <div class="card card-display play">
         <div class="card__info">
           <div class="card__menu">
             <p class="card__activity">Play</p>
@@ -76,7 +75,7 @@
           </div>
         </div>
       </div>
-      <div class="card study">
+      <div class="card card-display study">
         <div class="card__info">
           <div class="card__menu">
             <p class="card__activity">Study</p>
@@ -98,7 +97,7 @@
           </div>
         </div>
       </div>
-      <div class="card exercise">
+      <div class="card card-display exercise">
         <div class="card__info">
           <div class="card__menu">
             <p class="card__activity">Exercise</p>
@@ -120,7 +119,7 @@
           </div>
         </div>
       </div>
-      <div class="card social">
+      <div class="card card-display social">
         <div class="card__info">
           <div class="card__menu">
             <p class="card__activity">Social</p>
@@ -142,7 +141,7 @@
           </div>
         </div>
       </div>
-      <div class="card self-care">
+      <div class="card card-display self-care">
         <div class="card__info">
           <div class="card__menu">
             <p class="card__activity">Self Care</p>
