@@ -102,6 +102,9 @@ body {
   color: #e6e6e6;
   cursor: pointer;
 }
+.user .user__period .active {
+  color: #bdc1ff;
+}
 
 .work {
   background-color: #ff8c66;
