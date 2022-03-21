@@ -121,6 +121,11 @@ body {
 .exercise {
   background-color: #4acf81;
   background-image: url(/images/icon-exercise.svg);
+  padding-top: 2.5rem;
+  background-repeat: no-repeat;
+  background-position: 90% -2%;
+  background-size: 4rem;
+  display: flex;
 }
 
 .social {
@@ -136,7 +141,6 @@ body {
 .work,
 .play,
 .study,
-.exercise,
 .social,
 .self-care {
   padding-top: 2.5rem;
@@ -144,9 +148,6 @@ body {
   background-position: 90% -5%;
   background-size: 4rem;
   display: flex;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
-  height: fit-content;
 }
 
 .user__info,
@@ -310,7 +311,10 @@ footer a:hover {
   }
 
   footer {
+    background-color: #0f1424;
     position: fixed;
     bottom: 0;
+    width: 100%;
+    text-align: center;
   }
 }/*# sourceMappingURL=styles.css.map */
