@@ -15,9 +15,10 @@ $--cl-n-Desaturatedblue: hsl(235, 45%, 61%);
 $--cl-n-PaleBlue: hsl(236, 100%, 87%);
 $--cl-n-white: hsl(0, 0%, 90%);
 
-$--fs-400: clamp(1vh, 1.125rem, 3vh);
-$--fs-500: clamp(1vh, 2.5rem, 4vh);
-$--fs-600: clamp(1vh, 4rem, 5.5vh);
+$--fs-300: min(8vh, 1rem);
+$--fs-400: min(8vh, 1.125rem);
+$--fs-500: min(8vh, 1.483rem);
+$--fs-600: min(10vh, 2.063rem);
 
 html {
   font-family: "Rubik", sans-serif;
@@ -34,8 +35,10 @@ body {
 .grid-container {
   display: grid;
   grid-template-rows: repeat(7, auto);
-  width: 80vw;
-  gap: 1rem;
+  width: 88vw;
+  max-width: 400px;
+  gap: 1.5rem;
+  margin-top: 5rem;
 }
 
 .card {
@@ -46,17 +49,25 @@ body {
 
 .user {
   background-color: $--cl-n-Darkblue;
-  img {
-    outline: 3px solid $--cl-n-white;
-    border-radius: 50%;
-    height: 3rem;
-    width: 3rem;
+  .user__info {
+    display: flex;
+    align-items: center;
+    background-color: $--cl-p-Blue;
+    width: 100%;
+    padding: 2.25rem 2rem;
+    img {
+      outline: 3px solid $--cl-n-white;
+      border-radius: 50%;
+      height: 4rem;
+      width: 4rem;
+      margin-right: 1.35rem;
+    }
   }
   .user__period {
-    padding: 1rem;
     display: flex;
     justify-content: space-between;
     color: $--cl-n-Desaturatedblue;
+    padding: 1.5rem 2rem;
     a:hover {
       color: $--cl-n-white;
       cursor: pointer;
@@ -94,31 +105,25 @@ body {
 .exercise,
 .social,
 .self-care {
-  padding-top: 1.5rem;
+  padding-top: 2.5rem;
   background-repeat: no-repeat;
   background-position: 90% -5%;
-  background-size: 2rem;
+  background-size: 4rem;
   display: flex;
-  // height: 15rem; // **Overall card height.
+  height: fit-content; // **Overall card height.
 }
 
 .user__info,
 .card__info {
   background-color: $--cl-n-Darkblue;
-  padding: 1rem;
   width: 100%;
   border-radius: 1rem;
-}
-
-.user__info {
-  background-color: $--cl-p-Blue;
-  height: 65%;
-  display: flex;
 }
 
 .card__info {
   display: flex;
   flex-direction: column;
+  padding: 2rem 1.5rem;
   &:hover {
     background-color: $--cl-n-Desaturatedblue;
     cursor: pointer;
@@ -130,22 +135,65 @@ body {
   justify-content: space-between;
   align-items: center;
   img {
-    height: fit-content;
+    height: 30%;
   }
 }
 
 .card__time > .time:not(.hidden) {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 h1 {
-  font-size: 3rem;
+  font-size: $--fs-600;
   font-weight: 300;
+  padding: 0.51rem 0;
+}
+
+h2 {
+  font-size: $--fs-500;
+  font-weight: 300;
+  padding: 0.251rem 0;
+}
+
+h3 {
+  font-size: $--fs-300;
+  font-weight: 300;
+  color: $--cl-n-PaleBlue;
+}
+
+h4 {
+  font-size: $--fs-300;
+  font-weight: 400;
+  color: $--cl-n-PaleBlue;
+  padding: 0.251rem 0;
+}
+
+.card__activity {
+  font-size: $--fs-400;
+  font-weight: 500;
+}
+
+.time-toggle {
+  font-size: $--fs-400;
+  font-weight: 400;
 }
 
 .hidden {
   display: none;
+}
+
+footer {
+  font-size: 0.75rem;
+  color: $--cl-n-PaleBlue;
+  padding: 1rem;
+  a {
+    text-decoration: none;
+  }
+  a:hover {
+    color: $--cl-n-Desaturatedblue;
+  }
 }
 
 @import "./desktop.scss";
