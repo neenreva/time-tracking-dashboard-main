@@ -11,7 +11,7 @@ $--cl-p-selfcare: hsl(43, 84%, 65%);
 
 $--cl-n-Vrydarkbelue: hsl(226, 43%, 10%);
 $--cl-n-Darkblue: hsl(235, 46%, 20%);
-$--cl-n-Desaturatedblue: hsl(235, 45%, 61%);
+$--cl-n-Desaturatedblue: hsl(235, 40%, 40%);
 $--cl-n-PaleBlue: hsl(236, 100%, 87%);
 $--cl-n-white: hsl(0, 0%, 90%);
 
@@ -110,7 +110,7 @@ body {
   background-position: 90% -5%;
   background-size: 4rem;
   display: flex;
-  height: fit-content; // **Overall card height.
+  height: fit-content;
 }
 
 .user__info,
