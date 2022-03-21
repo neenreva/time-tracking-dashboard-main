@@ -1,4 +1,4 @@
-### This is a solution to the [Frontend Mentor](https://www.frontendmentor.io/home). challenge:
+* This is a solution to the [Frontend Mentor](https://www.frontendmentor.io/home) challenge:
 
 # Time tracking dashboard
 
