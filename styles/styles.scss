@@ -79,19 +79,19 @@ body {
 }
 .work {
   background-color: $--cl-p-work;
-  background-image: url(images/icon-work.svg);
+  background-image: url(../images/icon-work.svg);
 }
 .play {
   background-color: $--cl-p-play;
-  background-image: url(images/icon-play.svg);
+  background-image: url(../images/icon-play.svg);
 }
 .study {
   background-color: $--cl-p-study;
-  background-image: url(images/icon-study.svg);
+  background-image: url(../images/icon-study.svg);
 }
 .exercise {
   background-color: $--cl-p-exercise;
-  background-image: url(images/icon-exercise.svg);
+  background-image: url(../images/icon-exercise.svg);
   padding-top: 2.5rem;
   background-repeat: no-repeat;
   background-position: 90% -2%;
@@ -100,11 +100,11 @@ body {
 }
 .social {
   background-color: $--cl-p-social;
-  background-image: url(images/icon-social.svg);
+  background-image: url(../images/icon-social.svg);
 }
 .self-care {
   background-color: $--cl-p-selfcare;
-  background-image: url(images/icon-self-care.svg);
+  background-image: url(../images/icon-self-care.svg);
 }
 
 .work,
